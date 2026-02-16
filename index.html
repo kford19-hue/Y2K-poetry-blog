@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✿ my poetry blog ✿</title>
+    <meta name="description" content="A cute Y2K poetry blog with typewriter vibes." />
+    <link rel="icon" href="data:," />
+
+    <!-- Optional: typewriter-ish Google font (you can remove if you want zero external deps) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="bg">
+      <div class="noise"></div>
+      <div class="sparkles" aria-hidden="true"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">✿</span>
+        <div class="titleblock">
+          <h1>my poetry blog</h1>
+          <p class="subtitle">typewriter heartbeats + y2k glitter glue</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button id="newBtn" class="btn btn-primary" type="button">+ new poem</button>
+        <button id="exportBtn" class="btn" type="button">export</button>
+        <button id="importBtn" class="btn" type="button">import</button>
+        <input id="importFile" class="sr-only" type="file" accept="application/json" />
+      </nav>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <section class="card">
+          <h2>search</h2>
+          <input id="searchInput" class="input" placeholder="find a poem..." />
+          <div class="hint">tip: try a title, line, or tag ✨</div>
+        </section>
+
+        <section class="card">
+          <h2>tags</h2>
+          <div id="tagList" class="taglist"></div>
+        </section>
+
+        <section class="card sticker">
+          <h2>about</h2>
+          <p>
+            this is your little internet diary shelf. write soft things. write sharp
+            things. let them glow.
+          </p>
+          <p class="tiny">
+            saved in your browser (localStorage). export to back up or move to another device.
+          </p>
+        </section>
+      </aside>
+
+      <section class="content">
+        <div id="view" class="card maincard"></div>
+
+        <section class="card">
+          <div class="listhead">
+            <h2>posts</h2>
+            <div class="count" id="countText"></div>
+          </div>
+          <div id="postList" class="postlist"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>made with ✿ and dramatic punctuation</span>
+      <span class="sep">·</span>
+      <a href="#" id="scrollTop">back to top</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
